@@ -1,0 +1,16 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+# Головна сторінка
+@app.route("/")
+def index():
+    return "Welcome to Weather App"
+
+# Новий маршрут для Hello Student
+@app.route("/hello")
+def hello_student():
+    return "Hello Student"
+
+if __name__ == "__main__":
+    app.run(debug=True)
